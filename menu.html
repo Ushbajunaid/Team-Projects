@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu</title>
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .menu-title {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            color: #333;
+        }
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+        .menu-card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .menu-card:hover {
+            transform: translateY(-5px);
+        }
+        .item-price {
+            color: #ff5722;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="menu-title">Our Special Menu</h1>
+
+    <div class="filter-buttons">
+        <button class="btn btn-outline-dark filter-btn active" data-filter="all">All</button>
+        <button class="btn btn-outline-dark filter-btn" data-filter="fastfood">Fast Food</button>
+        <button class="btn btn-outline-dark filter-btn" data-filter="drinks">Drinks</button>
+        <button class="btn btn-outline-dark filter-btn" data-filter="desserts">Desserts</button>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4" id="menu-container">
+        
+        <div class="col menu-item fastfood">
+            <div class="card h-100 menu-card">
+                <img src="https://unsplash.com" class="card-img-top" alt="Burger">
+                <div class="card-body">
+                    <h5 class="card-title">Beef Burger</h5>
+                    <p class="card-text">Juicy beef patty with cheese, lettuce, and our secret sauce.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="item-price">Rs. 450</span>
+                        <button class="btn btn-sm btn-warning">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col menu-item fastfood">
+            <div class="card h-100 menu-card">
+                <img src="https://unsplash.com" class="card-img-top" alt="Pizza">
+                <div class="card-body">
+                    <h5 class="card-title">Pepperoni Pizza</h5>
+                    <p class="card-text">Freshly baked crust topped with pepperoni and extra mozzarella.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="item-price">Rs. 890</span>
+                        <button class="btn btn-sm btn-warning">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col menu-item drinks">
+            <div class="card h-100 menu-card">
+                <img src="https://unsplash.com" class="card-img-top" alt="Coffee">
+                <div class="card-body">
+                    <h5 class="card-title">Iced Latte</h5>
+                    <p class="card-text">Chilled espresso blended with fresh milk and vanilla syrup.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="item-price">Rs. 320</span>
+                        <button class="btn btn-sm btn-warning">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col menu-item drinks">
+            <div class="card h-100 menu-card">
+                <img src="https://unsplash.com" class="card-img-top" alt="Mocktail">
+                <div class="card-body">
+                    <h5 class="card-title">Mint Margarita</h5>
+                    <p class="card-text">Refreshing blend of fresh mint leaves, lime juice, and soda.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="item-price">Rs. 250</span>
+                        <button class="btn btn-sm btn-warning">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col menu-item desserts">
+            <div class="card h-100 menu-card">
+                <img src="https://unsplash.com" class="card-img-top" alt="Cake">
+                <div class="card-body">
+                    <h5 class="card-title">Chocolate Fudge Cake</h5>
+                    <p class="card-text">Rich and creamy multi-layered chocolate cake.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="item-price">Rs. 380</span>
+                        <button class="btn btn-sm btn-warning">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col menu-item desserts">
+            <div class="card h-100 menu-card">
+                <img src="https://unsplash.com" class="card-img-top" alt="Cupcake">
+                <div class="card-body">
+                    <h5 class="card-title">Strawberry Cupcake</h5>
+                    <p class="card-text">Fluffy cupcake topped with fresh strawberry buttercream icing.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="item-price">Rs. 180</span>
+                        <button class="btn btn-sm btn-warning">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://jquery.com"></script>
+<script src="https://jsdelivr.net"></script>
+<script>
+    $(document).ready(function(){
+        $(".filter-btn").click(function(){
+            $(".filter-btn").removeClass("active");
+            $(this).addClass("active");
+            
+            let value = $(this).attr("data-filter");
+            
+            if(value == "all") {
+                $(".menu-item").show("1000");
+            } else {
+                $(".menu-item").not("." + value).hide("1000");
+                $(".menu-item").filter("." + value).show("1000");
+            }
+        });
+    });
+</script>
+</body>
+</html>
