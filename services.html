@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie House | Our Services</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: white;
+            color:brown;
+        }
+
+        /* Navbar */
+        header {
+            background-color: rebeccapurple;
+            padding: 20px ;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: lightcoral;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(
+                rgba(50, 15, 20, 0.8),
+                rgba(50, 15, 20, 0.8)
+            ),
+            url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4");
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 100px 20px;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        /* Services */
+        .services {
+            padding: 70px ;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 35px;
+            color:lit red;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            color:grey;
+            margin-bottom: 40px;
+        }
+
+        .service-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background-color: white;
+            padding: 30px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: 0.3s;
+            border-bottom: 4px solid lightsalmon;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color:maroon;
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+
+        .service-card p {
+            color:grey;
+            line-height: 1.7;
+        }
+
+        /* Special Section */
+        .special {
+            background-color: maroom;
+            color: rgb(204, 108, 108);
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        .special h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .special p {
+            line-height: 1.7;
+        }
+
+        .special a {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #d9a15b;
+            color: midnightblue;
+            padding: 12px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .special a:hover {
+            background-color: rgb(155, 54, 54);
+        }
+
+        /* Footer */
+        footer {
+            background-color: burlywood;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        /* Responsive */
+        @media (max-width: 850px) {
+            .service-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 550px) {
+            header {
+                justify-content: center;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .service-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+   <header>
+    <div class="logo">Foodie House</div>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+<section>
+    <h1>Welcome to Foodie House</h1>
+    <p>Welcome to Foodie House! We offer delicious food,
+    fresh ingredients and amazing taste. Visit us and enjoy
+    your favourite meals with your family and friends.</p>
+</section>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Our Services</h1>
+        <p>Delicious Food, Excellent Service, Happy Moments!</p>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+
+        <h2>What We Offer</h2>
+
+        <p class="description">
+            We provide the best food services to make your dining
+            experience special and memorable.
+        </p>
+
+        <div class="service-container">
+
+            <div class="service-card">
+                <div class="service-icon">🍽️</div>
+                <h3>Dine-In Service</h3>
+                <p>
+                    Enjoy delicious meals in our comfortable,
+                    friendly and beautiful restaurant environment.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🛵</div>
+                <h3>Home Delivery</h3>
+                <p>
+                    Get your favourite food delivered fresh
+                    and hot directly to your doorstep.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🥡</div>
+                <h3>Takeaway Service</h3>
+                <p>
+                    Order your favourite dishes and take them
+                    home with our quick takeaway service.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📱</div>
+                <h3>Online Ordering</h3>
+                <p>
+                    Browse our food menu and order your
+                    favourite dishes conveniently online.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🎉</div>
+                <h3>Event Catering</h3>
+                <p>
+                    Make your special events memorable with
+                    our delicious food and catering services.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🎂</div>
+                <h3>Party & Family Deals</h3>
+                <p>
+                    Celebrate special moments with friends
+                    and family using our amazing food deals.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Special Section -->
+    <!-- Special Section -->
+<section class="special">
+
+    <h2>Explore Our Delicious Menu!</h2>
+
+    <p>
+        At Foodie House, we provide delicious food and excellent services to make every meal special. We offer a wide variety of fresh and tasty dishes, fast home delivery, takeaway services, and a comfortable dining experience. Our team focuses on quality, freshness, and customer satisfaction. Whether you are enjoying a meal with family or friends, Foodie House is always ready to serve you with love and care.
+    </p>
+
+    <p>
+        Every dish is prepared with fresh ingredients
+        and served with love. Find your favourite food
+        and enjoy a wonderful dining experience!
+    </p>
+
+    <a href="menu.html">Explore Our Menu</a>
+
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Foodie House. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
